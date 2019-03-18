@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="JavaScript">
+        <!--
+        function euroConverter(){
+            document.converter.dollar.value = document.converter.euro.value * 1.470
+            document.converter.pound.value = document.converter.euro.value * 0.717
+            document.converter.yen.value = document.converter.euro.value * 165.192
+        }
+        function dollarConverter(){
+            document.converter.euro.value = document.converter.dollar.value * 0.680
+            document.converter.pound.value = document.converter.dollar.value * 0.488
+            document.converter.yen.value = document.converter.dollar.value * 112.36
+        }
+        function poundConverter(){
+            document.converter.dollar.value = document.converter.pound.value * 2.049
+            document.converter.euro.value = document.converter.pound.value * 1.394
+            document.converter.yen.value = document.converter.pound.value * 230.27
+        }
+        function chinaConverter(){
+            document.converter.dollar.value = document.converter.yen.value * 0.0089
+            document.converter.pound.value = document.converter.yen.value * 0.00434
+            document.converter.euro.value = document.converter.yen.value * 0.00605
+        }
+        //-->
+    </script>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>ValutaCalc</title>
+</head>
+<body>
+    <div class="app">
+        <form name="converter">
+            <div id="USD">
+                <img id="USDimg" src="img/004-united-states.png">
+                <input class="input" type="number" name="dollar" onchange="dollarConverter()">
+            </div>
+            <div id="EUR">
+                <img id="EURimg" src="img/003-european-union.png">
+                <input class="input" type="number" name="euro" onchange="euroConverter()">
+            </div>
+            <div id="GBP">
+                <img id="GBPimg" src="img/002-united-kingdom.png">
+                <input class="input" type="number" name="pound" onchange="poundConverter()">
+            </div>
+            <div id="CNY">
+                <img id="CNYimg" src="img/japan.png">
+                <input class="input" type="number" name="yen" onchange="chinaConverter()">
+            </div>
+            <div id="bottom">
+                <input id="submit" name="convert" type="button" value="Convert">
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
